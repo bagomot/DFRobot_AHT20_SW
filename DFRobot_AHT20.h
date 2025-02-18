@@ -23,7 +23,7 @@
 #include <WProgram.h>
 #endif
 
-#include <Wire.h>
+#include <SoftWire.h>
 
 
 class DFRobot_AHT20{
@@ -34,7 +34,7 @@ public:
    * @param wire TwoWire class object reference
    * @return NONE
    */
-  DFRobot_AHT20(TwoWire &wire = Wire);
+  DFRobot_AHT20(SoftWire &wire = Wire);
   /**
    * @fn begin
    * @brief Initialize AHT20 Sensor
@@ -96,7 +96,7 @@ protected:
   void writeCommand(uint8_t cmd, uint8_t args1, uint8_t args2);
   uint8_t readData(uint8_t cmd, void* pBuf, size_t size);
 private:
-  TwoWire *_pWire;
+  SoftWire *_pWire;
   uint8_t _addr;
   float _temperature;   ///< Last reading's temperature (C)
   float _humidity;      ///< Last reading's humidity (percent)

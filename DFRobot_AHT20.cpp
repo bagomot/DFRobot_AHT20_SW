@@ -52,7 +52,7 @@ union uStatusBit_t{
   uint8_t status;          /**< status bit */
 };
 
-DFRobot_AHT20::DFRobot_AHT20(TwoWire &wire)
+DFRobot_AHT20::DFRobot_AHT20(SoftWire &wire)
   :_pWire(&wire), _addr(AHT20_DEF_I2C_ADDR), _temperature(0.0), _humidity(0.0), _init(false){}
 
 uint8_t DFRobot_AHT20::begin(){
