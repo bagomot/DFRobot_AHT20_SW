@@ -34,7 +34,7 @@ public:
    * @param wire TwoWire class object reference
    * @return NONE
    */
-  DFRobot_AHT20(SoftWire &wire = Wire);
+  DFRobot_AHT20(SoftWire &wire = SoftWire);
   /**
    * @fn begin
    * @brief Initialize AHT20 Sensor
